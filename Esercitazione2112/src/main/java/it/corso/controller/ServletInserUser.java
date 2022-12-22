@@ -26,7 +26,8 @@ public class ServletInserUser extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String country = request.getParameter("country");
-        User newUser = new User(name, email, country);
+        int age = Integer.parseInt(request.getParameter("age"));
+        User newUser = new User(name, email, country, age);
         try {
             userDAO.insertUser(newUser);
         } catch (SQLException e) {

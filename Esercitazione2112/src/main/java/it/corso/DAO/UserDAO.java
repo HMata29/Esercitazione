@@ -11,13 +11,13 @@ public class UserDAO {
     private String jdbcUsername = "root";
     private String jdbcPassword = "root";
 
-    private static final String INSERT_USERS_SQL = "INSERT INTO users" + "  (name, email, country) VALUES "
-            + " (?, ?, ?);";
+    private static final String INSERT_USERS_SQL = "INSERT INTO users" + "  (name, email, country , age ) VALUES "
+            + " (?, ?, ?,?);";
 
-    private static final String SELECT_USER_BY_ID = "select id,name,email,country from users where id =?";
+    private static final String SELECT_USER_BY_ID = "select id,name,email,country, age from users where id =?";
     private static final String SELECT_ALL_USERS = "select * from users";
     private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
-    private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
+    private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? , age = ? where id = ?;";
 
     public UserDAO() {
     }
@@ -37,6 +37,7 @@ public class UserDAO {
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getEmail());
             preparedStatement.setString(3, user.getCountry());
+            preparedStatement.setInt(4, user.getAge());
             System.out.println(preparedStatement);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
@@ -60,7 +61,8 @@ public class UserDAO {
                 String name = rs.getString("name");
                 String email = rs.getString("email");
                 String country = rs.getString("country");
-                user = new User(id, name, email, country);
+                int age = rs.getInt("age");
+                user = new User(id, name, email, country,age);
             }
         } catch (SQLException e) {
             printSQLException(e);
@@ -89,7 +91,8 @@ public class UserDAO {
                 String name = rs.getString("name");
                 String email = rs.getString("email");
                 String country = rs.getString("country");
-                users.add(new User(id, name, email, country));
+                int age = rs.getInt("age");
+                users.add(new User(id, name, email, country, age));
             }
         } catch (SQLException e) {
             printSQLException(e);
