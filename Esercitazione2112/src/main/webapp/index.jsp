@@ -20,5 +20,7 @@
 <a href="servletLogin">Servlet Form</a>
 <br>
 <a href="studente">Servlet studente</a>
+<br>
+<a href="ServletInserUser"> Servlet User Esempio</a>
 </body>
 </html>
