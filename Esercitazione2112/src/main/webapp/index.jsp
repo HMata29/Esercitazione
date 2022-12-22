@@ -22,5 +22,8 @@
 <a href="studente">Servlet studente</a>
 <br>
 <a href="ServletInserUser"> Servlet User Esempio</a>
+<br>
+<a href="ServletDeleteUser">Servlet Delete User</a>
+<br>
 </body>
 </html>
