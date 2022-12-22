@@ -16,5 +16,9 @@
 <br>
 <a href="servletName">Servlet Name</a>
 <p>il nome è ${nome}</p>
+<br>
+<a href="servletLogin">Servlet Form</a>
+<br>
+<a href="studente">Servlet studente</a>
 </body>
 </html>
