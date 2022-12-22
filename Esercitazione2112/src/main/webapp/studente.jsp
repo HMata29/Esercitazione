@@ -11,21 +11,22 @@
     <title>Title</title>
 </head>
 <body>
+<h1>Ecco i tuoi studenti</h1>
     <table>
         <tr>
             <td> ${s1Nome}</td>
             <td>${s1Cognome}</td>
-            <td>${s1matricola}</td>
+            <td>${s1Matricola}</td>
         </tr>
         <tr>
             <td> ${s2Nome}</td>
             <td>${s2Cognome}</td>
-            <td>${s2matricola}</td>
+            <td>${s2Matricola}</td>
         </tr>
         <tr>
             <td> ${s3Nome}</td>
             <td>${s3Cognome}</td>
-            <td>${s3matricola}</td>
+            <td>${s3Matricola}</td>
         </tr>
 
     </table>

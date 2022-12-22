@@ -37,9 +37,9 @@ public class StudenteController extends HttpServlet {
         String s2Nome = s2.getNome();
         String s2Cognome = s2.getCognome();
         int s2Matricola = s2.getMatrciola();
-        String s3Nome = s2.getNome();
-        String s3Cognome = s2.getCognome();
-        int s3Matricola = s2.getMatrciola();
+        String s3Nome = s3.getNome();
+        String s3Cognome = s3.getCognome();
+        int s3Matricola = s3.getMatrciola();
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher(file);
         request.setAttribute("s1Nome",s1Nome);
