@@ -17,13 +17,26 @@ public class ServletName  extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)throws IOException{
         String file = "servletName.jsp";
         String name = request.getParameter("nome");
-        request.setAttribute("name", name);
+        request.setAttribute("nome", name);
         RequestDispatcher view = request.getRequestDispatcher(file);
         try {
             view.forward(request,response);
         } catch (ServletException e) {
             throw new RuntimeException(e);
         }
+    }
+    @Override
+    public void doPost(HttpServletRequest request, HttpServletResponse response)throws IOException{
+        String file = "index.jsp";
+        String name = request.getParameter("nome");
+        request.setAttribute("nome", name);
+        RequestDispatcher view = request.getRequestDispatcher(file);
+        try {
+            view.forward(request,response);
+        } catch (ServletException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
 }

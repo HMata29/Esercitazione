@@ -15,5 +15,6 @@
         <input type="text" placeholder="Inserisci Qualcosa" name="nome">
         <button type="submit">Invia</button>
     </form>
+<p>il nome è ${nome}</p>
 </body>
 </html>

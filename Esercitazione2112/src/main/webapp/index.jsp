@@ -15,5 +15,6 @@
 <a href="servlet1">Servlet1</a>
 <br>
 <a href="servletName">Servlet Name</a>
+<p>il nome è ${nome}</p>
 </body>
 </html>
