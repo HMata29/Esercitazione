@@ -42,7 +42,7 @@
       </div>
     <div class="mb-3">
       <label class="form-label">Età (solo numero)</label>
-      <input type="number" class="form-control" name="age" required="required">
+      <input type="text" class="form-control" name="age" required="required">
     </div>
     <button type="submit" class="btn btn-success">Save</button>
   </form>

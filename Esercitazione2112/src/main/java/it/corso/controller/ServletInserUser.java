@@ -33,6 +33,7 @@ public class ServletInserUser extends HttpServlet {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {
+
             throw new RuntimeException(e);
         }
         response.sendRedirect("userInserito.jsp");
