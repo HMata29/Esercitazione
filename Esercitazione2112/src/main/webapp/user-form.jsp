@@ -4,32 +4,19 @@
 <html>
 <head>
   <title>User Management Application</title>
-  <link rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
+  <jsp:include page="style.jsp"></jsp:include>
 </head>
 <body>
 
 <header>
-  <nav class="navbar navbar-expand-md navbar-dark"
-       style="background-color: #50788b">
-    <div>
-      <a href="https://www.javaguides.net" class="navbar-brand"> User Management App </a>
-    </div>
-
-    <ul class="navbar-nav">
-      <li><a href="<%=request.getContextPath()%>/"
-             class="nav-link">home</a></li>
-    </ul>
-  </nav>
+  <jsp:include page="navbar.jsp"></jsp:include>
 </header>
 <br>
 
 <div>
   <form method="post" action="ServletInserUser">
     <div class="mb-3">
-    <label  class="form-label">Email address</label>
+    <label  class="form-label">nome</label>
     <input type="text" class="form-control" name="name" required="required">
     </div>
     <div class="mb-3">
@@ -46,6 +33,32 @@
     </div>
     <button type="submit" class="btn btn-success">Save</button>
   </form>
+
+  <!--<form method="post" action="ServletInserUser">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+   <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="text" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="text" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Invia</button>
+</form>-->
 
 </div>
 </body>

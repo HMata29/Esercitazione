@@ -9,8 +9,10 @@
 <html>
 <head>
     <title>Form</title>
+
 </head>
 <body>
+<jsp:include page="style.jsp"></jsp:include>
 <form action="servletLogin" method="post">
     <input type="text" placeholder="nome Utente" name="utente">
     <input type="password" placeholder="password" name="password">

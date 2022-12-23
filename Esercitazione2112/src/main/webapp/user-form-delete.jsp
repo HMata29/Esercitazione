@@ -9,12 +9,17 @@
 <html>
 <head>
     <title>Cancella</title>
+    <jsp:include page="style.jsp"></jsp:include>
 </head>
 <body>
-<form method="post" action="ServletDeleteUser">
-<label class="form-label">Inserisci id User da canellare</label>
-<input type="number" class=""form-control name="id" required="required">
-<button type="submit" class="btn btn-success">Save</button>
+<header>
+    <jsp:include page="navbar.jsp"></jsp:include>
+</header>
+    <div class="mb-3">
+        <label for="exampleInputNumber1" class="form-label">ID number</label>
+        <input type="number" class="form-control" id="exampleInputNumber1" aria-describedby="numberHelp" required="required">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </body>
 </html>
