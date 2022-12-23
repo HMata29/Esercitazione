@@ -23,18 +23,23 @@ public class ServletUpdateFromList extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("userUpdate-form.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("userUpdateForm.jsp");
         dispatcher.forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        User user = userDAO.selectUser(id);
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String country = request.getParameter("country");
         int age = Integer.parseInt(request.getParameter("age"));
+        User newUser = new User(id, name,email,country,age);
+        try {
+            userDAO.updateUser(newUser);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
         response.sendRedirect("UserReadAll.jsp");
     }
