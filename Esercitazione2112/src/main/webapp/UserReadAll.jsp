@@ -15,25 +15,25 @@
 <body>
 <jsp:include page="navbar.jsp"></jsp:include>
 
-    <table>
+    <table class="table">
         <tr>
-            <td>id</td>
-            <td>nome</td>
-            <td>email</td>
-            <td>country</td>
-            <td>age</td>
-            <td>action</td>
+            <th scope="col">id</th>
+            <th scope="col">nome</th>
+            <th scope="col">email</th>
+            <th scope="col">country</th>
+            <th scope="col">age</th>
+            <th scope="col">action</th>
         </tr>
 <c:forEach var="user" items = "${lista}">
     <tr>
-        <td><c:out value="${user.getId()}"/></td>
+        <th scope="col"><c:out value="${user.getId()}"/></th>
         <td><c:out value="${user.getName()}"/></td>
         <td><c:out value="${user.getEmail()}"/></td>
         <td><c:out value="${user.getCountry()}"/></td>
         <td><c:out value="${user.getAge()}"/></td>
         <td>
-            <a href="ServletDeleteUser?id=<c:out value='${user.getId()}'/>">D</a>
-            <a href="ServletUpdateUser?id=<c:out value='${user.getId()}'/>">U</a>
+            <a href="ServletDeleteFromList?id=<c:out value='${user.getId()}'/>"><i class="fa-solid fa-trash-can"></i></a>
+            <a href="ServletUpdateFromList?id=<c:out value='${user.getId()}'/>"><i class="fa-solid fa-pen"></i></a>
         </td>
         </c:forEach>
     </table>
